@@ -1,0 +1,85 @@
+<html lang="es">
+  <head>
+    <title>Actividades processing</title>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="processing.js"></script>
+  </head>
+  <body  background="Imagenes/Fondo.jpg">
+    <center><h1>Actividades processing</h1></center>
+
+    <br>
+
+    <center>
+        <script type="text/processing">
+            PImage imagenUno;
+int x=50;
+int y=50;
+
+void setup(){  
+  size(800,600);
+  imagenUno = loadImage("imagen.png");
+}
+
+void draw(){
+  background(255);
+     image(imagenUno,x,y); 
+}
+void keyPressed() {
+        if (key == 'a'){
+        x= x-5;
+      }
+        if (key == 'd'){ 
+        x= x+5;
+      }
+      if (key == 'w'){ 
+        y= y-5;
+      }
+      if (key == 's'){ 
+        y= y+5;
+      }
+      }
+          </script>
+          <canvas></canvas>
+        </center>
+
+    <br>
+
+    <header aling="center">
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="imagen.html">Imagen Movimiento</a>
+            <ul>
+              <li><a href="Cuadrado.html">Cuadrado RGB</a></li>
+              <li><a href="reloj.html">Reloj</a></li>
+              <li><a href="reloj_color.html">Reloj RGB</a></li>
+              <li><a href="iniciales.html">Iniciales</a></li>
+              <li><a href="animacion.html">Animacion</a></li>
+            </ul>  
+          </li>
+          <li><a href="">Juego Pong</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    
+
+  </body>
+</html>

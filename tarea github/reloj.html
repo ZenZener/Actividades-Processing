@@ -1,0 +1,90 @@
+<html lang="es">
+  <head>
+    <title>Actividades processing</title>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="processing.js"></script>
+  </head>
+  <body  background="Imagenes/Fondo.jpg">
+    <center><h1>Actividades processing</h1></center>
+    <br>
+
+    <center>
+        <script type="text/processing">
+          int x = 640;
+        int y= 360;
+        int P= 0;
+        void setup(){
+        size(640,360);
+        }
+        
+        void draw(){
+          background(130,90,160);
+        line(320,180,x,y);
+        if (P ==0){
+        x= x-10;
+        if (x == 0){
+        P = 1;
+        }
+        }
+        
+        if (P == 1){
+        y =  y-10;
+        
+        
+        if (y == 0){
+          P=2;
+        
+        }
+        }
+        if(P == 2){
+        x = x+10;
+        if (x == 640){
+          P=3;
+        
+        }
+        }
+        if (P==3){
+        y = y+10;
+        
+        if(y == 360){
+        P=0;
+        }
+        }
+        
+        
+        
+        
+        
+        
+        
+        }
+          </script>
+          <canvas></canvas>
+        </center>
+    
+    <br>
+
+
+    <header aling="center">
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="imagen.html">Imagen Movimiento</a>
+            <ul>
+              <li><a href="Cuadrado.html">Cuadrado RGB</a></li>
+              <li><a href="reloj.html">Reloj</a></li>
+              <li><a href="reloj_color.html">Reloj RGB</a></li>
+              <li><a href="iniciales.html">Iniciales</a></li>
+              <li><a href="animacion.html">Animacion</a></li>
+            </ul>  
+          </li>
+          <li><a href="">Juego Pong</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+  </body>
+</html>

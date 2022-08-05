@@ -1,0 +1,131 @@
+<html lang="es">
+  <head>
+    <title>Actividades processing</title>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="processing.js"></script>
+  </head>
+  <body  background="Imagenes/Fondo.jpg">
+    <center><h1>Actividades processing</h1></center>
+    <br>
+
+    <center>
+        <script type="text/processing">
+            int X= 640;
+            int Y= 360;
+            int L= 0;
+            int R = 0;
+            int G = 0;
+            int B = 0;
+            int P = 0;
+            int P2 = 0;
+            int P3 = 0;
+            void setup(){
+            size(640,360);
+            }
+            
+            void draw(){
+              
+              line(320,180,X,Y);
+            if (L ==0){
+            X= X-10;
+            if (X == 0){
+            L = 1;
+            }
+            }
+            
+            if (L == 1){
+            Y =  Y-10;
+            
+            
+            if (Y == 0){
+              L=2;
+            
+            }
+            }
+            if(L == 2){
+            X = X+10;
+            if (X == 640){
+              L=3;
+            
+            }
+            }
+            if (L==3){
+            Y = Y+10;
+            
+            if(Y == 360){
+            L=0;
+            }
+            }
+             
+              stroke(R,G,B);
+              if (P == 0){
+              R= R+5;
+              if (R==255){
+                P = 1;
+              }
+              }
+              if( P == 1){
+              R= R-5;
+                if(R == 25){
+              P2= 1;
+              }
+              }
+              if (P2==1){
+            G= G+5;
+            R= R-15;
+            if(G==255){
+            P2=2;
+            }
+            }
+            if(P2==2){
+            G= G-5;
+            B= B+5;
+            if(B==255){
+            P3=2;
+            if(G==25){
+            P3=2;
+            }
+            }
+            }
+            
+            if(P3==2){
+            B= B-5;
+            if(B==25){
+            P= 0;
+            P2= 0;
+            P3= 0;
+            }
+            }
+            
+            
+            
+            }
+          </script>
+          <canvas></canvas>
+        </center>
+    
+    <br>
+
+    <header aling="center">
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="imagen.html">Imagen Movimiento</a>
+            <ul>
+              <li><a href="Cuadrado.html">Cuadrado RGB</a></li>
+              <li><a href="reloj.html">Reloj</a></li>
+              <li><a href="reloj_color.html">Reloj RGB</a></li>
+              <li><a href="iniciales.html">Iniciales</a></li>
+              <li><a href="animacion.html">Animacion</a></li>
+            </ul>  
+          </li>
+          <li><a href="">Juego Pong</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+  </body>
+</html>
